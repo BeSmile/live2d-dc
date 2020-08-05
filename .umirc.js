@@ -1,13 +1,16 @@
 
 // ref: https://umijs.org/config/
 export default {
+  history: 'hash',
+  hash: true,
   treeShaking: true,
+  publicPath: './',
   routes: [
     {
       path: '/',
       component: '../layouts/index',
       routes: [
-        { path: '/', component: '../pages/index' }
+        { path: '/:model', component: '../pages/index' }
       ]
     }
   ],
