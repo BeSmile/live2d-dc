@@ -4,14 +4,19 @@
  * @Author: linjinzhi
  * @Date: 2020-08-06 11:05:40
  * @LastEditors: linjinzhi
- * @LastEditTime: 2020-08-06 11:08:23
+ * @LastEditTime: 2020-08-06 12:19:28
  */
-
+const env = process.env.NODE_ENV;
+const base = env === 'development'?'/':'/live2d-dc.github.io/';
+const publicPath = env === 'development'?'/':'/live2d-dc.github.io/';
+const path = env === 'development'?'':'/live2d-dc.github.io/';
 // ref: https://umijs.org/config/
 export default {
+  history: 'hash',
+  hash: true,
   treeShaking: true,
-  base: '/live2d-dc.github.io/',
-  publicPath: '/live2d-dc.github.io/',
+  base: base,
+  publicPath: publicPath,
   routes: [
     {
       path: '/',
@@ -38,4 +43,7 @@ export default {
     }],
     'umi-plugin-gh-pages'
   ],
+  define: {
+    PATH: path,
+  }
 }

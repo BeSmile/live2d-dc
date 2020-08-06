@@ -4,8 +4,9 @@
  * @Author: linjinzhi
  * @Date: 2020-08-05 17:13:14
  * @LastEditors: linjinzhi
- * @LastEditTime: 2020-08-06 00:30:03
+ * @LastEditTime: 2020-08-06 12:18:30
  */
+ /*global PATH */
 import React, { createRef, useEffect, useRef } from 'react'
 import styles from './index.css';
 
@@ -87,7 +88,7 @@ export default function({
   modelY = 0.1;
 
   const getPath = React.useCallback((pathDir, file) => {
-    return pathDir + modelName + '/' + file
+    return PATH + pathDir + modelName + '/' + file
   }, [modelName]);
   // ./live2d/c000_01/MOC.c000_01.json
   
