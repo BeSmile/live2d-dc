@@ -4,7 +4,7 @@ export default {
   history: 'hash',
   hash: true,
   treeShaking: true,
-  publicPath: './',
+  publicPath: '/',
   routes: [
     {
       path: '/',
