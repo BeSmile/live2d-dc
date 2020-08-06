@@ -1,10 +1,17 @@
+/*
+ * @Description: 
+ * @Version: 
+ * @Author: linjinzhi
+ * @Date: 2020-08-06 11:05:40
+ * @LastEditors: linjinzhi
+ * @LastEditTime: 2020-08-06 11:08:23
+ */
 
 // ref: https://umijs.org/config/
 export default {
-  history: 'hash',
-  hash: true,
   treeShaking: true,
-  publicPath: '/',
+  base: '/live2d-dc.github.io/',
+  publicPath: '/live2d-dc.github.io/',
   routes: [
     {
       path: '/',
@@ -29,5 +36,6 @@ export default {
         ],
       },
     }],
+    'umi-plugin-gh-pages'
   ],
 }
